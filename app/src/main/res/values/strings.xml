@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SoccerTeams</string>
+    <string name="real_madrid">REAL MADRID :</string>
+    <string name="home">HOME</string>
+    <string name="news">NEWS</string>
+    <string name="players">PLAYERS</string>
+    <string name="team">TEAM</string>
+    <string name="tour_and_museum">TOUR AND MUSEUM</string>
+    <string name="tickets">TICKETS</string>
+    <string name="shop">SHOP</string>
+    <string name="recent">RECENT</string>
+    <string name="games">GAMES</string>
+</resources>
