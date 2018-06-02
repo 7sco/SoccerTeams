@@ -5,5 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="color_yellow">#febe10</color>
     <color name="grayIconTint">#727272</color>
+    <color name="icon_bkg">#4efdfdfd</color>
+    <color name="bkg_news">#30000000</color>
 
 </resources>
