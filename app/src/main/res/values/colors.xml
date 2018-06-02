@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#263238</color>
     <color name="colorAccent">#FF4081</color>
     <color name="color_yellow">#febe10</color>
+    <color name="grayIconTint">#727272</color>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.example.franciscoandrade.soccerteams;
+package com.example.franciscoandrade.soccerteams.data.model;
 
 public class GamesModel {
 
