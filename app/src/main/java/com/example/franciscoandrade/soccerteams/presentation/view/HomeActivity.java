@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,16 +27,16 @@ public class HomeActivity extends AppCompatActivity {
     TextView playersTv;
     @BindView(R.id.team_tv)
     TextView teamTv;
+    @BindView(R.id.viewPager)
+    ViewPager viewPager;
+    @BindView(R.id.news_tv)
+    TextView newsTv;
     @BindView(R.id.tour_tv)
     TextView tourTv;
     @BindView(R.id.tickets_tv)
     TextView ticketsTv;
     @BindView(R.id.shop_tv)
     TextView shopTv;
-    @BindView(R.id.viewPager)
-    ViewPager viewPager;
-    @BindView(R.id.news_tv)
-    TextView newsTv;
 
 
     private ViewPagerAdapter viewPagerAdapter;
@@ -65,7 +64,7 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.news_tv,R.id.about_tv, R.id.players_tv, R.id.team_tv, R.id.tour_tv, R.id.tickets_tv, R.id.shop_tv, R.id.textView15})
+    @OnClick({R.id.news_tv, R.id.about_tv, R.id.players_tv, R.id.team_tv, R.id.textView15, R.id.tour_tv, R.id.tickets_tv, R.id.shop_tv})
     public void onViewClicked(View view) {
         Intent intent = null;
         switch (view.getId()) {
@@ -82,23 +81,25 @@ public class HomeActivity extends AppCompatActivity {
                 intent = new Intent(this, TeamActivity.class);
                 break;
             case R.id.tour_tv:
-                //intent = new Intent(this, TourActivity.class);
                 Toast.makeText(this, "TOUR", Toast.LENGTH_SHORT).show();
-
+                intent=null;
                 break;
             case R.id.tickets_tv:
                 Toast.makeText(this, "TICKETS", Toast.LENGTH_SHORT).show();
+                intent=null;
                 break;
             case R.id.shop_tv:
                 Toast.makeText(this, "SHOP", Toast.LENGTH_SHORT).show();
+                intent=null;
                 break;
         }
 
-        startActivity(intent);
-        if(view.getId()!=R.id.tour_tv && view.getId()!=R.id.tickets_tv  && view.getId()!=R.id.shop_tv){
-
+        if (intent!=null) {
+            startActivity(intent);
             finish();
         }
+
+
 
     }
 

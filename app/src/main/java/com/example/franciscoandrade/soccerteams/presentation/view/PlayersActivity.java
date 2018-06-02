@@ -12,7 +12,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.franciscoandrade.soccerteams.R;
+import com.example.franciscoandrade.soccerteams.data.api.ClientService;
+import com.example.franciscoandrade.soccerteams.data.api.NewsApi;
+import com.example.franciscoandrade.soccerteams.data.api.TeamApi;
+import com.example.franciscoandrade.soccerteams.data.model.News;
 import com.example.franciscoandrade.soccerteams.data.model.Player;
+import com.example.franciscoandrade.soccerteams.data.model.team.TeamProfile;
 import com.example.franciscoandrade.soccerteams.presentation.featureScrollView.PlayerAdapter;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
@@ -23,6 +28,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class PlayersActivity extends AppCompatActivity implements
         DiscreteScrollView.ScrollStateChangeListener<PlayerAdapter.ViewHolder>,
@@ -54,7 +62,7 @@ public class PlayersActivity extends AppCompatActivity implements
     ConstraintLayout background;
 
 
-    private List<Player> listPlayer;
+    private List<TeamProfile.Players> listPlayer;
     PlayerAdapter adapter;
 
     @Override
@@ -64,22 +72,25 @@ public class PlayersActivity extends AppCompatActivity implements
         ButterKnife.bind(this);
 
 
-        listPlayer= new ArrayList<>();
 
-        for (int i = 0; i < 5; i++) {
-            if(i%2==0){
-            listPlayer.add(new Player("S. Ramos", R.drawable.sergio_ramos, R.drawable.ramos_head, i*5, i*3, i*2, i*i));
-            }
-            else {
-                listPlayer.add(new Player("G. Bale", R.drawable.g_bale, R.drawable.bale_head, i*5, i*3, i*2, i*i));
-            }
 
-        }
+//        listPlayer= new ArrayList<>();
+//
+//        for (int i = 0; i < 5; i++) {
+//            if(i%2==0){
+//            listPlayer.add(new Player("S. Ramos", R.drawable.sergio_ramos, R.drawable.ramos_head, i*5, i*3, i*2, i*i));
+//            }
+//            else {
+//                listPlayer.add(new Player("G. Bale", R.drawable.g_bale, R.drawable.bale_head, i*5, i*3, i*2, i*i));
+//            }
+//
+//        }
 
 
 
         adapter= new PlayerAdapter();
-        adapter.addMovies(listPlayer);
+        getListPlayersName();
+
 
 
 
@@ -98,6 +109,29 @@ public class PlayersActivity extends AppCompatActivity implements
 
     }
 
+    private void getListPlayersName() {
+        ClientService clientService = new ClientService(getString(R.string.WW_Domain_Team));
+        TeamApi teamApi= clientService.getTeamApi();
+        Call<TeamProfile> teamCall= teamApi.getTeamList();
+        teamCall.enqueue(new Callback<TeamProfile>() {
+            @Override
+            public void onResponse(Call<TeamProfile> call, Response<TeamProfile> response) {
+                Log.d("==", "onResponse: "+response.toString());
+                Log.d("==", "onResponse: "+response.body().toString());
+                Log.d("==", "onResponse: "+response.body().getPlayers().size());
+                listPlayer= new ArrayList<>();
+                listPlayer.addAll(response.body().getPlayers());
+                adapter.addMovies(listPlayer);
+            }
+
+            @Override
+            public void onFailure(Call<TeamProfile> call, Throwable t) {
+                Log.d("==", "onFailure: FAIL"+t.getMessage());
+
+            }
+        });
+    }
+
     @OnClick(R.id.back_btn)
     public void onViewClicked() {
         Intent intent = new Intent(this, HomeActivity.class);
@@ -113,17 +147,19 @@ public class PlayersActivity extends AppCompatActivity implements
             holder.showText();
 
 
-            Log.d("===", "onCurrentItemChanged: "+listPlayer.get(adapterPosition).getName());
-            Log.d("===", "onCurrentItemChanged: "+listPlayer.get(adapterPosition).getAssist());
-            Log.d("===", "onCurrentItemChanged: "+listPlayer.get(adapterPosition).getGames());
-            Log.d("===", "onCurrentItemChanged: "+listPlayer.get(adapterPosition).getGoals());
-            Log.d("===", "onCurrentItemChanged: "+listPlayer.get(adapterPosition).getShots());
+//            Log.d("===", "onCurrentItemChanged: "+listPlayer.get(adapterPosition).getName());
+//            Log.d("===", "onCurrentItemChanged: "+listPlayer.get(adapterPosition).getAssist());
+//            Log.d("===", "onCurrentItemChanged: "+listPlayer.get(adapterPosition).getGames());
+//            Log.d("===", "onCurrentItemChanged: "+listPlayer.get(adapterPosition).getGoals());
+//            Log.d("===", "onCurrentItemChanged: "+listPlayer.get(adapterPosition).getShots());
 
-            playerImg.setImageResource(listPlayer.get(adapterPosition).getPlayerImage());
-            gamesNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getGames()));
-            goalsNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getGoals()));
-            assistNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getAssist()));
-            shotsNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getShots()));
+            Log.d("==", "onCurrentItemChanged: ID#: "+listPlayer.get(adapterPosition).getId());
+
+//            playerImg.setImageResource(listPlayer.get(adapterPosition).getPlayerImage());
+//            gamesNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getGames()));
+//            goalsNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getGoals()));
+//            assistNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getAssist()));
+//            shotsNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getShots()));
 
 
         }

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.franciscoandrade.soccerteams.R;
 import com.example.franciscoandrade.soccerteams.data.model.Player;
+import com.example.franciscoandrade.soccerteams.data.model.team.TeamProfile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +22,8 @@ import butterknife.ButterKnife;
 public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder> {
 
     private RecyclerView parentRecycler;
-    private List<Player> data;
+    private List<TeamProfile.Players> data = new ArrayList<>();
 
-    public PlayerAdapter() {
-        data= new ArrayList<>();
-    }
 
 
     @Override
@@ -44,10 +42,11 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Player player= data.get(position);
+        TeamProfile.Players players=data.get(position);
 
-        holder.image.setImageResource(player.getPlayerImageHead());
-        holder.name.setText(player.getName());
+
+        holder.image.setImageResource(R.drawable.bale_head);
+        holder.name.setText(players.getName());
 
 
     }
@@ -56,7 +55,8 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
     public int getItemCount() {
         return data.size();
     }
-    public void addMovies(List<Player> rootObject) {
+
+    public void addMovies(List<TeamProfile.Players> rootObject) {
         data.addAll(rootObject);
         notifyDataSetChanged();
     }
