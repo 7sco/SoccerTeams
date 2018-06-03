@@ -4,24 +4,31 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.view.HomeActivity">
+        <activity android:name=".presentation.view.HomeActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presentation.view.NewsActivity" />
-        <activity android:name=".presentation.view.PlayersActivity" />
-        <activity android:name=".presentation.view.TeamActivity" />
-        <activity android:name=".presentation.view.TourActivity" />
-        <activity android:name=".presentation.view.AboutActivity"></activity>
+        <activity android:name=".presentation.view.NewsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".presentation.view.PlayersActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".presentation.view.TeamActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".presentation.view.TourActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".presentation.view.AboutActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

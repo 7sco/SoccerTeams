@@ -29,6 +29,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.example.franciscoandrade.soccerteams.data.model.recentGames.RecentGames.*;
+
 public class HomeActivity extends AppCompatActivity {
 
     @BindView(R.id.about_tv)
@@ -52,7 +54,7 @@ public class HomeActivity extends AppCompatActivity {
     private ViewPagerAdapter viewPagerAdapter;
     private ArrayList<GamesModel> mContents;
     ClientService clientService;
-    private List<RecentGames.Results> listResults;
+    private List<Results> listResults;
 
 
 
@@ -63,19 +65,8 @@ public class HomeActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         clientService = new ClientService(getString(R.string.WW_Domain_Team));
-        mContents = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++) {
-            mContents.add(new GamesModel(R.drawable.realmadridshield, R.drawable.realmadridshield, "Real Madrid F.C", "Liverpool F.C. ", i + "",
-
-                    (5 - i) + "", "Gareth Bale", R.drawable.bale_head, "URL Here"));
-        }
-
-        viewPagerAdapter = new ViewPagerAdapter( HomeActivity.this);
         getGames();
-        viewPager.setPageTransformer(true, new CardStackTransformer());
-        viewPager.setOffscreenPageLimit(5);
-        viewPager.setAdapter(viewPagerAdapter);
 
     }
 
@@ -119,6 +110,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void getGames() {
+
         TeamApi teamApi= clientService.getTeamApi();
         Call<RecentGames> recentCall= teamApi.getRecentGames();
         recentCall.enqueue(new Callback<RecentGames>() {
@@ -126,10 +118,14 @@ public class HomeActivity extends AppCompatActivity {
             public void onResponse(Call<RecentGames> call, Response<RecentGames> response) {
                 Log.d("==", "onResponse: "+response.toString());
                 Log.d("==", "onResponse: "+response.body().toString());
-                listResults= new ArrayList<>();
-                listResults= response.body().getResults();
-                viewPagerAdapter.addData(listResults);
+                listResults = new ArrayList<>();
+                listResults = response.body().getResults();
 
+                //viewPagerAdapter.addData(listResults);
+                viewPagerAdapter = new ViewPagerAdapter( HomeActivity.this, listResults);
+                viewPager.setPageTransformer(true, new CardStackTransformer());
+                viewPager.setOffscreenPageLimit(10);
+                viewPager.setAdapter(viewPagerAdapter);
             }
 
             @Override
@@ -137,6 +133,8 @@ public class HomeActivity extends AppCompatActivity {
                 Log.d("==", "onFailure: ");
             }
         });
+
+
 
     }
 }

@@ -32,16 +32,16 @@ public class ViewPagerAdapter extends PagerAdapter{
 
 
 
-    private List<RecentGames.Results> contents= new ArrayList<>();
+    private List<RecentGames.Results> contents;
     private Context context;
 
-    public ViewPagerAdapter(Context context) {
-
+    public ViewPagerAdapter(Context context, List<RecentGames.Results> listResults) {
         this.context = context;
+        contents=listResults;
     }
 
     public void addData(List<RecentGames.Results> data){
-        contents.clear();
+
         contents.addAll(data);
         notifyDataSetChanged();
     }
