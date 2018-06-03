@@ -22,10 +22,7 @@ public class ViewPagerAdapter extends PagerAdapter{
     @BindView(R.id.home_team)ImageView homeTeamImage;
     @BindView(R.id.home_score)TextView homeScore;
     @BindView(R.id.away_score)TextView awayScore;
-    @BindView(R.id.away_team)ImageView awayTeamImage;
-    @BindView(R.id.match_player)ImageView matchPlayerImage;
-    @BindView(R.id.match_player_name)TextView matchPlayerName;
-    @BindView(R.id.highlights_btn)TextView highlightsButton;
+
 
 
 
@@ -59,17 +56,12 @@ public class ViewPagerAdapter extends PagerAdapter{
         homeTeamImage = view.findViewById(R.id.home_team);
         homeScore = view.findViewById(R.id.home_score);
         awayScore = view.findViewById(R.id.away_score);
-        awayTeamImage = view.findViewById(R.id.away_team);
-        matchPlayerImage = view.findViewById(R.id.match_player);
-        matchPlayerName = view.findViewById(R.id.match_player_name);
-        highlightsButton = view.findViewById(R.id.highlights_btn);
+
 
         homeTeamImage.setImageResource(contents.get(position).getHomeTeamShield());
-        awayTeamImage.setImageResource(contents.get(position).getAwayTeamShield());
         homeScore.setText(contents.get(position).getHomeTeamScore());
         awayScore.setText(contents.get(position).getAwayTeamScore());
-        matchPlayerName.setText(contents.get(position).getManOfMatchName());
-        matchPlayerImage.setImageResource(contents.get(position).getManOfMatchImage());
+
         return view;
     }
 

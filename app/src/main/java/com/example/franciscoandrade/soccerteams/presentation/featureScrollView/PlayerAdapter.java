@@ -1,7 +1,6 @@
 package com.example.franciscoandrade.soccerteams.presentation.featureScrollView;
 
 import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.franciscoandrade.soccerteams.R;
-import com.example.franciscoandrade.soccerteams.data.model.Player;
 import com.example.franciscoandrade.soccerteams.data.model.team.TeamProfile;
 
 import java.util.ArrayList;
@@ -45,7 +43,92 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
         TeamProfile.Players players=data.get(position);
 
 
-        holder.image.setImageResource(R.drawable.bale_head);
+        if (players.getName().toLowerCase().contains("keylo")){
+            holder.image.setImageResource(R.drawable.keylor_head);
+        }
+
+        if (players.getName().toLowerCase().contains("carvajal,")){
+            holder.image.setImageResource(R.drawable.catvajal_head);
+        }
+
+        if (players.getName().toLowerCase().contains("jesus")){
+            holder.image.setImageResource(R.drawable.vallejo_head);
+        }
+
+
+        if (players.getName().toLowerCase().contains("sergio")){
+            holder.image.setImageResource(R.drawable.ramos_head);
+        }
+        if (players.getName().toLowerCase().contains("raphael")){
+            holder.image.setImageResource(R.drawable.varane_head);
+        }
+        if (players.getName().toLowerCase().contains("nacho")){
+            holder.image.setImageResource(R.drawable.nacho_head);
+        }
+
+        if (players.getName().toLowerCase().contains("ronaldo")){
+            holder.image.setImageResource(R.drawable.cristiano_head);
+        }
+
+        if (players.getName().toLowerCase().contains("toni")){
+            holder.image.setImageResource(R.drawable.kross_head);
+        }
+
+        if (players.getName().toLowerCase().contains("karim")){
+            holder.image.setImageResource(R.drawable.benzema_head);
+        }
+        if (players.getName().toLowerCase().contains("luka")){
+            holder.image.setImageResource(R.drawable.modric_head);
+        }
+
+        if (players.getName().toLowerCase().contains("gareth")){
+            holder.image.setImageResource(R.drawable.bale_head);
+        }
+
+        if (players.getName().toLowerCase().contains("marcelo")){
+            holder.image.setImageResource(R.drawable.marcelo_head);
+        }
+        if (players.getName().toLowerCase().contains("kiko")){
+            holder.image.setImageResource(R.drawable.casilla_head);
+        }
+        if (players.getName().toLowerCase().contains("casemiro")){
+            holder.image.setImageResource(R.drawable.casemiro_head);
+        }
+
+        if (players.getName().toLowerCase().contains("theo")){
+            holder.image.setImageResource(R.drawable.theo_head);
+        }
+
+        if (players.getName().toLowerCase().contains("lucas")){
+            holder.image.setImageResource(R.drawable.lucas_head);
+        }
+
+        if (players.getName().toLowerCase().contains("marcos")){
+            holder.image.setImageResource(R.drawable.llorente_head);
+        }
+        if (players.getName().toLowerCase().contains("achraf")){
+            holder.image.setImageResource(R.drawable.achraf_head);
+        }
+        if (players.getName().toLowerCase().contains("marco")){
+            holder.image.setImageResource(R.drawable.asensio_head);
+        }
+        if (players.getName().toLowerCase().contains("borja")){
+            holder.image.setImageResource(R.drawable.mayoral_head);
+        }
+        if (players.getName().toLowerCase().contains("isco")){
+            holder.image.setImageResource(R.drawable.isco_head);
+        }
+        if (players.getName().toLowerCase().contains("mateo")){
+            holder.image.setImageResource(R.drawable.kovacic_head);
+        }
+        if (players.getName().toLowerCase().contains("dani")){
+            holder.image.setImageResource(R.drawable.cevallos_head);
+        }
+        if (players.getName().toLowerCase().contains("zidane")){
+            holder.image.setImageResource(R.drawable.zidane_head);
+        }
+
+
         holder.name.setText(players.getName());
 
 

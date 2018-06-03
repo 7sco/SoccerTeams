@@ -8,5 +8,6 @@
     <color name="icon_bkg">#4efdfdfd</color>
     <color name="bkg_news">#30000000</color>
     <color name="white">#fff</color>
+    <color name="light_gray">#e6e6e6</color>
 
 </resources>
