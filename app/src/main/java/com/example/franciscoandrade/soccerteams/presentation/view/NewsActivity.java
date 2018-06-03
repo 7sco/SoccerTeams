@@ -73,8 +73,9 @@ public class NewsActivity extends AppCompatActivity {
 
     @OnClick(R.id.back_btn)
     public void onViewClicked() {
-        Intent intent= new Intent(this, HomeActivity.class);
-        startActivity(intent);
+//        Intent intent= new Intent(this, HomeActivity.class);
+//        startActivity(intent);
+        onBackPressed();
         finish();
 
     }

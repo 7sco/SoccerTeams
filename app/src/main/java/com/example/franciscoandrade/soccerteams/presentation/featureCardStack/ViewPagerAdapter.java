@@ -12,7 +12,9 @@ import android.widget.TextView;
 
 import com.example.franciscoandrade.soccerteams.R;
 import com.example.franciscoandrade.soccerteams.data.model.GamesModel;
+import com.example.franciscoandrade.soccerteams.data.model.recentGames.RecentGames;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -20,18 +22,28 @@ import butterknife.ButterKnife;
 
 public class ViewPagerAdapter extends PagerAdapter{
     @BindView(R.id.home_team)ImageView homeTeamImage;
+    @BindView(R.id.away_team)ImageView awayTeamImage;
     @BindView(R.id.home_score)TextView homeScore;
     @BindView(R.id.away_score)TextView awayScore;
+    @BindView(R.id.competition)TextView competition;
+    @BindView(R.id.homeName)TextView homeName;
+    @BindView(R.id.awayName)TextView awayName;
 
 
 
 
-    private List<GamesModel> contents;
+    private List<RecentGames.Results> contents= new ArrayList<>();
     private Context context;
 
-    public ViewPagerAdapter(List<GamesModel> contents, Context context) {
-        this.contents = contents;
+    public ViewPagerAdapter(Context context) {
+
         this.context = context;
+    }
+
+    public void addData(List<RecentGames.Results> data){
+        contents.clear();
+        contents.addAll(data);
+        notifyDataSetChanged();
     }
 
     @Override
@@ -51,18 +63,97 @@ public class ViewPagerAdapter extends PagerAdapter{
         LayoutInflater inflater= (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view= inflater.inflate(R.layout.games_viewholder, container, false);
         container.addView(view);
-        ButterKnife.bind(container);
+        ButterKnife.bind(this,view);
 
-        homeTeamImage = view.findViewById(R.id.home_team);
-        homeScore = view.findViewById(R.id.home_score);
-        awayScore = view.findViewById(R.id.away_score);
+//        homeTeamImage = view.findViewById(R.id.home_team);
+//        homeScore = view.findViewById(R.id.home_score);
+//        awayScore = view.findViewById(R.id.away_score);
+//        competition = view.findViewById(R.id.competition);
 
 
-        homeTeamImage.setImageResource(contents.get(position).getHomeTeamShield());
-        homeScore.setText(contents.get(position).getHomeTeamScore());
-        awayScore.setText(contents.get(position).getAwayTeamScore());
+
+        homeTeamImage.setImageResource(R.drawable.realmadridshield);
+        homeScore.setText(String.valueOf(contents.get(position).getSportEventStatus().getHomeScore()));
+        awayScore.setText(String.valueOf(contents.get(position).getSportEventStatus().getAwayScore()));
+        competition.setText(contents.get(position).getSportEvent().getTournament().getName());
+        homeName.setText(contents.get(position).getSportEvent().getCompetitors().get(0).getName());
+        awayName.setText(contents.get(position).getSportEvent().getCompetitors().get(1).getName());
+
+
+        setShieldHomeTeam(position);
+        setShieldAwayTeam(position);
+
 
         return view;
+    }
+
+    private void setShieldHomeTeam(int position) {
+        switch (contents.get(position).getSportEvent().getCompetitors().get(0).getName()){
+            case "Liverpool FC":
+                homeTeamImage.setImageResource(R.drawable.liverpool_escudo);
+                break;
+            case "Villarreal CF":
+                homeTeamImage.setImageResource(R.drawable.villarreal_escudo);
+                break;
+            case "Celta de Vigo":
+                homeTeamImage.setImageResource(R.drawable.celta_escudo);
+                break;
+            case "Sevilla FC":
+                homeTeamImage.setImageResource(R.drawable.sevilla_escudo);
+                break;
+            case "FC Barcelona":
+                homeTeamImage.setImageResource(R.drawable.barcelona_escudo);
+                break;
+            case "Bayern Munich":
+                homeTeamImage.setImageResource(R.drawable.bayern_escudo);
+                break;
+            case "CD Leganes":
+                homeTeamImage.setImageResource(R.drawable.leganes_escudo);
+                break;
+            case "Athletic Bilbao":
+                homeTeamImage.setImageResource(R.drawable.athletic_escudo);
+                break;
+            case "Malaga CF":
+                homeTeamImage.setImageResource(R.drawable.malaga_escudo);
+                break;
+
+                default:
+                    homeTeamImage.setImageResource(R.drawable.realmadridshield);
+        }
+    }
+    private void setShieldAwayTeam(int position) {
+        switch (contents.get(position).getSportEvent().getCompetitors().get(1).getName()){
+            case "Liverpool FC":
+                awayTeamImage.setImageResource(R.drawable.liverpool_escudo);
+                break;
+            case "Villarreal CF":
+                awayTeamImage.setImageResource(R.drawable.villarreal_escudo);
+                break;
+            case "Celta de Vigo":
+                awayTeamImage.setImageResource(R.drawable.celta_escudo);
+                break;
+            case "Sevilla FC":
+                awayTeamImage.setImageResource(R.drawable.sevilla_escudo);
+                break;
+            case "FC Barcelona":
+                awayTeamImage.setImageResource(R.drawable.barcelona_escudo);
+                break;
+            case "Bayern Munich":
+                awayTeamImage.setImageResource(R.drawable.bayern_escudo);
+                break;
+            case "CD Leganes":
+                awayTeamImage.setImageResource(R.drawable.leganes_escudo);
+                break;
+            case "Athletic Bilbao":
+                awayTeamImage.setImageResource(R.drawable.athletic_escudo);
+                break;
+            case "Malaga CF":
+                awayTeamImage.setImageResource(R.drawable.malaga_escudo);
+                break;
+
+            default:
+                awayTeamImage.setImageResource(R.drawable.realmadridshield);
+        }
     }
 
 

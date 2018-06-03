@@ -2,6 +2,7 @@ package com.example.franciscoandrade.soccerteams.data.api;
 
 import com.example.franciscoandrade.soccerteams.data.model.News;
 import com.example.franciscoandrade.soccerteams.data.model.ScheduleTeam;
+import com.example.franciscoandrade.soccerteams.data.model.recentGames.RecentGames;
 import com.example.franciscoandrade.soccerteams.data.model.standings.StandingModel;
 import com.example.franciscoandrade.soccerteams.data.model.team.PlayerInfo;
 import com.example.franciscoandrade.soccerteams.data.model.team.TeamProfile;
@@ -23,4 +24,7 @@ public interface TeamApi {
 
     @GET("/soccer-xt3/eu/en/tournaments/sr:tournament:8/standings.json?api_key=kz93euznkrqasajzgutcxmkm")
     Call<StandingModel> getStandings();
+
+    @GET("/soccer-xt3/eu/en/teams/sr:competitor:2829/results.json?api_key=kz93euznkrqasajzgutcxmkm")
+    Call<RecentGames> getRecentGames();
 }

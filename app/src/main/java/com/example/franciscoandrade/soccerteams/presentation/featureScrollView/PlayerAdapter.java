@@ -103,7 +103,7 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
             holder.image.setImageResource(R.drawable.lucas_head);
         }
 
-        if (players.getName().toLowerCase().contains("marcos")){
+        if (players.getName().toLowerCase().contains("llorente,")){
             holder.image.setImageResource(R.drawable.llorente_head);
         }
         if (players.getName().toLowerCase().contains("achraf")){
@@ -121,7 +121,7 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
         if (players.getName().toLowerCase().contains("mateo")){
             holder.image.setImageResource(R.drawable.kovacic_head);
         }
-        if (players.getName().toLowerCase().contains("dani")){
+        if (players.getName().toLowerCase().contains("ceballos,")){
             holder.image.setImageResource(R.drawable.cevallos_head);
         }
         if (players.getName().toLowerCase().contains("zidane")){

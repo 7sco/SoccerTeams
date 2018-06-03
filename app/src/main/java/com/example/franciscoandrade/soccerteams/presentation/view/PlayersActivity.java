@@ -128,9 +128,10 @@ public class PlayersActivity extends AppCompatActivity implements
 
     @OnClick(R.id.back_btn)
     public void onViewClicked() {
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, HomeActivity.class);
+//        startActivity(intent);
        // overridePendingTransition  ( R.anim.right_slide_out,R.anim.right_slide_in);
+        onBackPressed();
         finish();
     }
 
