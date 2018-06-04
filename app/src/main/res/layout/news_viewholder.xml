@@ -12,6 +12,7 @@
         android:background="@color/bkg_news">
 
     <TextView
+        android:id="@+id/news_tittle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="News Tittle"
@@ -22,6 +23,7 @@
         android:textColor="@color/color_yellow"
         android:textStyle="bold"/>
     <TextView
+        android:id="@+id/news_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
