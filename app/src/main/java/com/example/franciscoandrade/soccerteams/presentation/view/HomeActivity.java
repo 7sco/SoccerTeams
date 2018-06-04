@@ -1,6 +1,7 @@
 package com.example.franciscoandrade.soccerteams.presentation.view;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -55,7 +56,7 @@ public class HomeActivity extends AppCompatActivity {
     private ArrayList<GamesModel> mContents;
     ClientService clientService;
     private List<Results> listResults;
-
+    private  Uri uri;
 
 
     @Override
@@ -67,6 +68,9 @@ public class HomeActivity extends AppCompatActivity {
         clientService = new ClientService(getString(R.string.WW_Domain_Team));
 
         getGames();
+        String video_path = "https://www.youtube.com/watch?v=UlFkOZFQCBQ";
+        uri = Uri.parse(video_path);
+        uri = Uri.parse("vnd.youtube:"  + uri.getQueryParameter("v"));
 
     }
 
@@ -87,8 +91,7 @@ public class HomeActivity extends AppCompatActivity {
                 intent = new Intent(this, TeamActivity.class);
                 break;
             case R.id.tour_tv:
-                Toast.makeText(this, "TOUR", Toast.LENGTH_SHORT).show();
-                intent=null;
+                intent = new Intent(Intent.ACTION_VIEW, uri);
                 break;
             case R.id.tickets_tv:
                 Toast.makeText(this, "TICKETS", Toast.LENGTH_SHORT).show();
