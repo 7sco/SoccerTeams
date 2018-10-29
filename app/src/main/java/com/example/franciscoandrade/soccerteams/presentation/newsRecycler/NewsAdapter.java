@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.example.franciscoandrade.soccerteams.R;
 import com.example.franciscoandrade.soccerteams.data.model.News;
 
+import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +28,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
     public void onBindViewHolder(@NonNull NewsViewHolder holder, int position) {
         News.Articles articles= data.get(position);
         holder.bind(articles);
+
 
     }
 

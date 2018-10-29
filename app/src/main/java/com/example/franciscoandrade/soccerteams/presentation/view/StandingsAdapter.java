@@ -24,6 +24,7 @@ public class StandingsAdapter extends RecyclerView.Adapter<StandingsViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull StandingsViewHolder holder, int position) {
+
         StandingModel.TeamStandings standings= standingsList.get(position);
         holder.bind(standings, position);
 

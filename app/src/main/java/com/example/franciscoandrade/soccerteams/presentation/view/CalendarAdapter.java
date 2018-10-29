@@ -28,18 +28,14 @@ class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull CalendarViewHolder holder, int position) {
-        ScheduleTeam.Schedule team= data.get(position);
-
-        Log.d("==", "onBindViewHolder: AAPTER");
-        try {
-            holder.bind(team);
-            //Log.d("date", "onBindViewHolder: ");
-        } catch (ParseException e) {
-            e.printStackTrace();
-            //Log.d("date", "onBindViewHolder: ");
+        if (position>0){
+            ScheduleTeam.Schedule team= data.get(position);
+            try {
+                holder.bind(team);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
-
-
     }
 
     @Override
@@ -47,7 +43,7 @@ class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
         return data.size();
     }
 
-    public void addData(List<ScheduleTeam.Schedule> scheduleList){
+    void addData(List<ScheduleTeam.Schedule> scheduleList){
         data.clear();
         data.addAll(scheduleList);
         notifyDataSetChanged();

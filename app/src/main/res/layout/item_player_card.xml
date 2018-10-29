@@ -9,7 +9,7 @@
     android:layout_marginBottom="50dp"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
-    card_view:cardBackgroundColor="#a7fdfdfd">
+    card_view:cardBackgroundColor="@android:color/white">
 
     <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,7 +31,7 @@
             android:layout_marginBottom="0dp"
             android:paddingTop="4dp"
             android:textAllCaps="true"
-            android:textColor="@android:color/black"
+            android:textColor="@color/color_yellow"
             android:textSize="10sp"
             android:textStyle="normal"
             android:textAlignment="center"
@@ -40,11 +40,11 @@
 
         <ImageView
             android:id="@+id/image_head"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            tools:src="@drawable/bale_head" />
+            android:scaleType="fitEnd"
+            tools:src="@drawable/keylor_head" />
 
     </FrameLayout>
 

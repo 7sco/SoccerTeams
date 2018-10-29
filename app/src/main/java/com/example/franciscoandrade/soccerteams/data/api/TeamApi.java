@@ -1,6 +1,5 @@
 package com.example.franciscoandrade.soccerteams.data.api;
 
-import com.example.franciscoandrade.soccerteams.data.model.News;
 import com.example.franciscoandrade.soccerteams.data.model.ScheduleTeam;
 import com.example.franciscoandrade.soccerteams.data.model.recentGames.RecentGames;
 import com.example.franciscoandrade.soccerteams.data.model.standings.StandingModel;

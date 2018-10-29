@@ -1,6 +1,5 @@
 package com.example.franciscoandrade.soccerteams.presentation.view;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,7 +14,9 @@ import com.example.franciscoandrade.soccerteams.data.api.ClientService;
 import com.example.franciscoandrade.soccerteams.data.api.TeamApi;
 import com.example.franciscoandrade.soccerteams.data.model.team.PlayerInfo;
 import com.example.franciscoandrade.soccerteams.data.model.team.TeamProfile;
+import com.example.franciscoandrade.soccerteams.presentation.PlayersListBody;
 import com.example.franciscoandrade.soccerteams.presentation.featureScrollView.PlayerAdapter;
+import com.squareup.picasso.Picasso;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
 
@@ -62,39 +63,18 @@ public class PlayersActivity extends AppCompatActivity implements
     private List<TeamProfile.Players> listPlayer;
     private PlayerAdapter adapter;
 
+    private PlayersListBody playersInfo;
+    TeamApi teamApi;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_players);
         ButterKnife.bind(this);
-
-
-
-
-//        listPlayer= new ArrayList<>();
-//
-//        for (int i = 0; i < 5; i++) {
-//            if(i%2==0){
-//            listPlayer.add(new PlayerInfo("S. Ramos", R.drawable.sergio_ramos, R.drawable.ramos_head, i*5, i*3, i*2, i*i));
-//            }
-//            else {
-//                listPlayer.add(new PlayerInfo("G. Bale", R.drawable.g_bale, R.drawable.bale_head, i*5, i*3, i*2, i*i));
-//            }
-//
-//        }
-
-
-
         adapter= new PlayerAdapter();
         clientService = new ClientService(getString(R.string.WW_Domain_Team));
-
         getListPlayersName();
-
-
-
-
-
-
         playerPicker.setSlideOnFling(true);
         playerPicker.setAdapter(adapter);
         playerPicker.addOnItemChangedListener(this);
@@ -105,7 +85,9 @@ public class PlayersActivity extends AppCompatActivity implements
                 .setMaxScale(1.5f)
                 .setMinScale(0.8f)
                 .build());
+      playersInfo = new PlayersListBody();
 
+        teamApi = clientService.getTeamApi();
     }
 
     private void getListPlayersName() {
@@ -128,9 +110,6 @@ public class PlayersActivity extends AppCompatActivity implements
 
     @OnClick(R.id.back_btn)
     public void onViewClicked() {
-//        Intent intent = new Intent(this, HomeActivity.class);
-//        startActivity(intent);
-       // overridePendingTransition  ( R.anim.right_slide_out,R.anim.right_slide_in);
         onBackPressed();
         finish();
     }
@@ -140,103 +119,21 @@ public class PlayersActivity extends AppCompatActivity implements
 
         if (holder != null) {
             holder.showText();
-            if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("keylo")){
-                playerImg.setImageResource(R.drawable.keylor_body);
-            }
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("dani")){
-                playerImg.setImageResource(R.drawable.carvajal_body);
-            }
+            Integer player = listPlayer.get(adapterPosition).getJerseyNumber();
+            String playerUrl="https://www.Realmadrid.com/cs/Satellite?blobcol=urldata&blobheader=image%2Fpng&blobkey=id&blobtable=MungoBlobs&blobwhere="+ playersInfo.bodyList.get(player)+"&ssbinary=true";
+            Picasso.get().load(playerUrl).error(R.drawable.realmadridshield).into(playerImg);
 
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("jesus")){
-                playerImg.setImageResource(R.drawable.vallejo_body);
-            }
-
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("sergio")){
-                playerImg.setImageResource(R.drawable.sergio_ramos);
-            }
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("raphael")){
-                playerImg.setImageResource(R.drawable.varane_body);
-            }
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("nacho")){
-                playerImg.setImageResource(R.drawable.nacho_body);
-            }
-
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("ronaldo")){
-                playerImg.setImageResource(R.drawable.cristiano_body);
-            }
-
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("toni")){
-                playerImg.setImageResource(R.drawable.kroos_body);
-            }
-
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("karim")){
-                playerImg.setImageResource(R.drawable.benzema_body);
-            }
-           else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("luka")){
-                playerImg.setImageResource(R.drawable.modric_body);
-            }
-
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("gareth")){
-                playerImg.setImageResource(R.drawable.g_bale);
-            }
-
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("marcelo")){
-                playerImg.setImageResource(R.drawable.marcelo_body);
-            }
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("kiko")){
-                playerImg.setImageResource(R.drawable.casilla_body);
-            }
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("casemiro")){
-                playerImg.setImageResource(R.drawable.casemiro_body);
-            }
-
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("theo")){
-                playerImg.setImageResource(R.drawable.theo_body);
-            }
-
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("lucas")){
-                playerImg.setImageResource(R.drawable.lucas_body);
-            }
-
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("marcos")){
-                playerImg.setImageResource(R.drawable.llorente_body);
-            }
-           else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("achraf")){
-                playerImg.setImageResource(R.drawable.achraf_body);
-            }
-           else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("marco")){
-                playerImg.setImageResource(R.drawable.asensio_body);
-            }
-           else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("borja")){
-                playerImg.setImageResource(R.drawable.mayoral_body);
-            }
-           else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("isco")){
-                playerImg.setImageResource(R.drawable.isco_body);
-            }
-           else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("mateo")){
-                playerImg.setImageResource(R.drawable.kovacic_body);
-            }
-            else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("dani")){
-                playerImg.setImageResource(R.drawable.ceballos_body);
-            }
-           else if (listPlayer.get(adapterPosition).getName().toLowerCase().contains("zidane")){
-                playerImg.setImageResource(R.drawable.zidane_body);
-            }
-
-            TeamApi teamApi= clientService.getTeamApi();
             Call<PlayerInfo> playerCall= teamApi.getPlayerInfo(listPlayer.get(adapterPosition).getId());
             playerCall.enqueue(new Callback<PlayerInfo>() {
                 @Override
                 public void onResponse(Call<PlayerInfo> call, Response<PlayerInfo> response) {
                     PlayerInfo playerInfo= response.body();
-
                     if(playerInfo != null){
                         gamesNumber.setText(String.valueOf(playerInfo.getStatistics().getTotals().getMatchesPlayed()));
                         goalsNumber.setText(String.valueOf(playerInfo.getStatistics().getTotals().getGoalsScored()));
                         assistNumber.setText(String.valueOf(playerInfo.getStatistics().getTotals().getAssists()));
                         shotsNumber.setText(String.valueOf(String.valueOf(playerInfo.getStatistics().getTotals().getYellowCards())));
                     }
-
                 }
 
                 @Override
@@ -244,15 +141,6 @@ public class PlayersActivity extends AppCompatActivity implements
                     Log.d("==", "onFailure: "+t.getMessage());
                 }
             });
-
-
-//            playerImg.setImageResource(listPlayer.get(adapterPosition).getPlayerImage());
-//            gamesNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getGames()));
-//            goalsNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getGoals()));
-//            assistNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getAssist()));
-//            shotsNumber.setText(String.valueOf(listPlayer.get(adapterPosition).getShots()));
-
-
         }
 
     }
@@ -272,30 +160,4 @@ public class PlayersActivity extends AppCompatActivity implements
     public void onScroll(float scrollPosition, int currentPosition, int newPosition, @Nullable PlayerAdapter.ViewHolder currentHolder, @Nullable PlayerAdapter.ViewHolder newCurrent) {
 
     }
-
-
-//    public void showText() {
-//        int parentHeight = ((View) background.getParent()).getHeight();
-//        float scale = (parentHeight - textView.getHeight()) / (float) background.getHeight();
-//        textView.setPivotX(textView.getWidth() *  0.5f);
-//        textView.setPivotY(0);
-//        textView.animate().scaleX(scale)
-//                .withEndAction(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        textView.setVisibility(View.VISIBLE);
-//                        //imageView.setColorFilter(Color.BLACK);
-//                    }
-//                })
-//                .scaleY(scale).setDuration(200)
-//                .start();
-//    }
-
-//    public void hideText() {
-//        //imageView.setColorFilter(ContextCompat.getColor(imageView.getContext(), R.color.grayIconTint));
-//        textView.setVisibility(View.INVISIBLE);
-//        textView.animate().scaleX(1f).scaleY(1f)
-//                .setDuration(200)
-//                .start();
-//    }
 }

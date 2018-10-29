@@ -119,12 +119,8 @@ public class HomeActivity extends AppCompatActivity {
         recentCall.enqueue(new Callback<RecentGames>() {
             @Override
             public void onResponse(Call<RecentGames> call, Response<RecentGames> response) {
-                Log.d("==", "onResponse: "+response.toString());
-                Log.d("==", "onResponse: "+response.body().toString());
                 listResults = new ArrayList<>();
                 listResults = response.body().getResults();
-
-                //viewPagerAdapter.addData(listResults);
                 viewPagerAdapter = new ViewPagerAdapter( HomeActivity.this, listResults);
                 viewPager.setPageTransformer(true, new CardStackTransformer());
                 viewPager.setOffscreenPageLimit(10);

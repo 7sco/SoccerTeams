@@ -36,8 +36,6 @@ public class ScheduleFragment extends Fragment {
     ClientService clientService;
     CalendarAdapter adapter;
 
-    List<ScheduleTeam.Schedule> data;
-
     public ScheduleFragment() {
         // Required empty public constructor
     }
@@ -49,7 +47,6 @@ public class ScheduleFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_schedule, container, false);
         unbinder = ButterKnife.bind(this, view);
         clientService = new ClientService(getString(R.string.WW_Domain_Team));
-
 
         adapter= new CalendarAdapter();
         recyclerGames.setAdapter(adapter);
@@ -64,14 +61,8 @@ public class ScheduleFragment extends Fragment {
         scheduleCall.enqueue(new Callback<ScheduleTeam>() {
             @Override
             public void onResponse(Call<ScheduleTeam> call, Response<ScheduleTeam> response) {
-                Log.d("==", "onResponse: " + response.toString());
-                Log.d("==", "onResponse: " + response.body().toString());
-                Log.d("==", "onResponse: " + response.body().getSchedule().get(0).getCompetitors().get(0).getName());
-                Log.d("==", "onResponse: " + response.body().getSchedule().get(0).getCompetitors().get(1).getName());
-                data= new ArrayList<>();
-                data=response.body().getSchedule();
-                adapter.addData(data);
-                Log.d("==", "onResponse: DATA ADDEED");
+              Log.d("CALENDAR", "onResponse: "+response);
+                adapter.addData(response.body().getSchedule());
             }
 
             @Override
