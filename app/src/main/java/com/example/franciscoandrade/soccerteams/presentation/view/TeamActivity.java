@@ -28,7 +28,7 @@ public class TeamActivity extends AppCompatActivity {
     @BindView(R.id.standings_underline)
     TextView standingsUnderline;
 
-    private Fragment fragment;
+    private Fragment fragmentCalendar, fragmentStandings;
     private FragmentManager fragmentManager = getSupportFragmentManager();
 
 
@@ -41,18 +41,17 @@ public class TeamActivity extends AppCompatActivity {
         calendarUnderline.setVisibility(View.VISIBLE);
         standingsUnderline.setVisibility(View.INVISIBLE);
         calendarTv.setTextColor(getResources().getColor(R.color.color_yellow));
-        fragment= fragmentManager.findFragmentById(R.id.conainer);
-        fragment= new ScheduleFragment();
+        fragmentCalendar= fragmentManager.findFragmentById(R.id.conainer);
+        fragmentStandings= fragmentManager.findFragmentById(R.id.conainer);
+        fragmentCalendar= new ScheduleFragment();
         fragmentManager.beginTransaction()
-                .replace(R.id.conainer, fragment)
+                .replace(R.id.conainer, fragmentCalendar)
                 .commit();
 
     }
 
     @OnClick(R.id.back_btn)
     public void onViewClicked() {
-//        Intent intent = new Intent(this, HomeActivity.class);
-//        startActivity(intent);
         onBackPressed();
         finish();
     }
@@ -78,19 +77,25 @@ public class TeamActivity extends AppCompatActivity {
 
     @OnClick({R.id.calendar_tv, R.id.standings_tv})
     public void onViewClicked(View view) {
+
+
         switch (view.getId()) {
             case R.id.calendar_tv:
-                fragment= new ScheduleFragment();
+                if (fragmentCalendar==null){
+                    fragmentCalendar= new ScheduleFragment();
+                }
                 showUnderlineCalendar();
                 fragmentManager.beginTransaction()
-                        .replace(R.id.conainer, fragment)
+                        .replace(R.id.conainer, fragmentCalendar)
                         .commit();
                 break;
             case R.id.standings_tv:
-                fragment= new StandingsFragment();
+                if (fragmentStandings==null){
+                    fragmentStandings= new StandingsFragment();
+                }
                 showUnderlineStandings();
                 fragmentManager.beginTransaction()
-                        .replace(R.id.conainer, fragment)
+                        .replace(R.id.conainer, fragmentStandings)
                         .commit();
                 break;
         }
