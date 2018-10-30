@@ -62,6 +62,8 @@ public class TeamActivity extends AppCompatActivity {
             calendarTv.setTextColor(getResources().getColor(R.color.white));
             standingsUnderline.setVisibility(View.VISIBLE);
             calendarUnderline.setVisibility(View.INVISIBLE);
+            fragmentManager.beginTransaction().hide(fragmentCalendar).commit();
+            fragmentManager.beginTransaction().show(fragmentStandings).commit();
         }
     }
 
@@ -71,6 +73,8 @@ public class TeamActivity extends AppCompatActivity {
             calendarTv.setTextColor(getResources().getColor(R.color.color_yellow));
             calendarUnderline.setVisibility(View.VISIBLE);
             standingsUnderline.setVisibility(View.INVISIBLE);
+            fragmentManager.beginTransaction().hide(fragmentStandings).commit();
+            fragmentManager.beginTransaction().show(fragmentCalendar).commit();
         }
     }
 
@@ -82,30 +86,22 @@ public class TeamActivity extends AppCompatActivity {
             case R.id.calendar_tv:
                 if (fragmentCalendar==null){
                     fragmentCalendar= new ScheduleFragment();
-                    fragmentManager.beginTransaction()
+
+                }
+                fragmentManager.beginTransaction()
                         .replace(R.id.conainer, fragmentCalendar)
                         .commit();
-                }
                 showUnderlineCalendar();
-                fragmentManager.beginTransaction().hide(fragmentStandings).commit();
-                fragmentManager.beginTransaction().detach(fragmentStandings);
-                fragmentManager.beginTransaction().attach(fragmentCalendar);
-                fragmentManager.beginTransaction().show(fragmentCalendar).commit();
-
                 break;
             case R.id.standings_tv:
                 if (fragmentStandings==null){
                     fragmentStandings= new StandingsFragment();
-                    fragmentManager.beginTransaction()
+
+                }
+                fragmentManager.beginTransaction()
                         .replace(R.id.conainer, fragmentStandings)
                         .commit();
-                }
                 showUnderlineStandings();
-                fragmentManager.beginTransaction().hide(fragmentCalendar).commit();
-                fragmentManager.beginTransaction().detach(fragmentCalendar);
-                fragmentManager.beginTransaction().attach(fragmentStandings);
-                fragmentManager.beginTransaction().show(fragmentStandings).commit();
-
                 break;
         }
     }

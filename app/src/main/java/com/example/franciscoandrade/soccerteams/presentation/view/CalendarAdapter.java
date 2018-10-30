@@ -17,7 +17,11 @@ import java.util.List;
 
 class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
 
-    private List<ScheduleTeam.Schedule> data= new ArrayList<>();
+    private List<ScheduleTeam.Schedule> data;
+
+    public CalendarAdapter() {
+        data= new ArrayList<>();
+    }
 
     @NonNull
     @Override
@@ -28,8 +32,8 @@ class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull CalendarViewHolder holder, int position) {
-        if (position>0){
-            ScheduleTeam.Schedule team= data.get(position);
+        ScheduleTeam.Schedule team= data.get(position);
+        if (team!=null){
             try {
                 holder.bind(team);
             } catch (ParseException e) {
