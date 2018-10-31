@@ -34,7 +34,7 @@ public class CalendarViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(ScheduleTeam.Schedule team) throws ParseException {
-
+        Log.d("TEAM", "bind: 1: "+team.getCompetitors().get(0).getName()+" - 2: "+team.getCompetitors().get(1).getName());
         hometeam.setText(team.getCompetitors().get(0).getName());
         awayTeam.setText(team.getCompetitors().get(1).getName());
 
@@ -48,8 +48,7 @@ public class CalendarViewHolder extends RecyclerView.ViewHolder {
 
         String [] timeArray=array[1].split(":");
 
-        Log.d("date==", "bind: "+timeArray[0]);
-        //Log.d("date==", "bind: "+timeArray[1]);
+
         int hour;
         if (timeArray[0].equals("00")){
           hour=0;

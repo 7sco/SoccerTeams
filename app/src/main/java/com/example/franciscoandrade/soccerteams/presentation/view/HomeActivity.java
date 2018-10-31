@@ -77,6 +77,7 @@ public class HomeActivity extends AppCompatActivity {
     @OnClick({R.id.news_tv, R.id.about_tv, R.id.players_tv, R.id.team_tv, R.id.textView15, R.id.tour_tv, R.id.tickets_tv, R.id.shop_tv})
     public void onViewClicked(View view) {
         Intent intent = null;
+        String url="";
         switch (view.getId()) {
             case R.id.about_tv:
                 intent = new Intent(this, AboutActivity.class);
@@ -94,12 +95,14 @@ public class HomeActivity extends AppCompatActivity {
                 intent = new Intent(Intent.ACTION_VIEW, uri);
                 break;
             case R.id.tickets_tv:
-                Toast.makeText(this, "TICKETS", Toast.LENGTH_SHORT).show();
-                intent=null;
+                url = "https://www.realmadrid.com/en/tickets";
+                intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
                 break;
             case R.id.shop_tv:
-                Toast.makeText(this, "SHOP", Toast.LENGTH_SHORT).show();
-                intent=null;
+                 url = "https://shop.realmadrid.com/stores/realmadrid/en";
+                intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
                 break;
         }
 
