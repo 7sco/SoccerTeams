@@ -1,0 +1,2042 @@
+{
+generated_at: "2018-10-31T22:44:57+00:00",
+schema: "http://schemas.sportradar.com/bsa/soccer/v1/json/endpoints/soccer/team_profile.json",
+team: {
+id: "sr:competitor:2829",
+name: "Real Madrid",
+country: "Spain",
+country_code: "ESP",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+},
+abbreviation: "MAD"
+},
+venue: {
+id: "sr:venue:754",
+name: "Santiago Bernabeu",
+capacity: 80000,
+city_name: "Madrid",
+country_name: "Spain",
+map_coordinates: "40.453068,-3.688354",
+country_code: "ESP"
+},
+jerseys: [
+{
+type: "home",
+base: "ffffff",
+sleeve: "ffffff",
+number: "000000",
+squares: false,
+stripes: false,
+horizontal_stripes: false,
+split: false,
+shirt_type: "short_sleeves",
+sleeve_detail: "000000"
+},
+{
+type: "away",
+base: "242c35",
+sleeve: "242c35",
+number: "ffffff",
+squares: false,
+stripes: false,
+horizontal_stripes: false,
+split: false,
+shirt_type: "short_sleeves",
+sleeve_detail: "c0c0c0"
+},
+{
+type: "goalkeeper",
+base: "ff0000",
+sleeve: "ff0000",
+number: "000000",
+squares: false,
+stripes: false,
+horizontal_stripes: false,
+split: false,
+shirt_type: "short_sleeves"
+},
+{
+type: "third",
+base: "ff2f2f",
+sleeve: "ff2f2f",
+number: "ffffff",
+squares: false,
+stripes: false,
+horizontal_stripes: false,
+split: false,
+shirt_type: "short_sleeves",
+sleeve_detail: "ff2f2f"
+}
+],
+manager: {
+id: "sr:player:4746",
+name: "Solari, Santiago",
+nationality: "Argentina",
+country_code: "ARG"
+},
+players: [
+{
+id: "sr:player:56113",
+name: "Navas, Keylor",
+type: "goalkeeper",
+date_of_birth: "1986-12-15",
+nationality: "Costa Rica",
+country_code: "CRI",
+height: 185,
+weight: 80,
+jersey_number: 1,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:138572",
+name: "Carvajal, Dani",
+type: "defender",
+date_of_birth: "1992-01-11",
+nationality: "Spain",
+country_code: "ESP",
+height: 173,
+weight: 73,
+jersey_number: 2,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:355048",
+name: "Vallejo, Jesus",
+type: "defender",
+date_of_birth: "1997-01-05",
+nationality: "Spain",
+country_code: "ESP",
+height: 184,
+weight: 79,
+jersey_number: 3,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:10710",
+name: "Ramos, Sergio",
+type: "defender",
+date_of_birth: "1986-03-30",
+nationality: "Spain",
+country_code: "ESP",
+height: 184,
+weight: 82,
+jersey_number: 4,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:138310",
+name: "Varane, Raphael",
+type: "defender",
+date_of_birth: "1993-04-25",
+nationality: "France",
+country_code: "FRA",
+height: 191,
+weight: 81,
+jersey_number: 5,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:69404",
+name: "Nacho",
+type: "defender",
+date_of_birth: "1990-01-18",
+nationality: "Spain",
+country_code: "ESP",
+height: 180,
+weight: 76,
+jersey_number: 6,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:175753",
+name: "Diaz, Mariano",
+type: "forward",
+date_of_birth: "1993-08-01",
+nationality: "Spain",
+country_code: "ESP",
+height: 180,
+weight: 76,
+jersey_number: 7,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:26502",
+name: "Kroos, Toni",
+type: "midfielder",
+date_of_birth: "1990-01-04",
+nationality: "Germany",
+country_code: "DEU",
+height: 183,
+weight: 76,
+jersey_number: 8,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:3306",
+name: "Benzema, Karim",
+type: "forward",
+date_of_birth: "1987-12-19",
+nationality: "France",
+country_code: "FRA",
+height: 185,
+weight: 81,
+jersey_number: 9,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:15466",
+name: "Modric, Luka",
+type: "midfielder",
+date_of_birth: "1985-09-09",
+nationality: "Croatia",
+country_code: "HRV",
+height: 172,
+weight: 66,
+jersey_number: 10,
+preferred_foot: "both",
+gender: "male"
+},
+{
+id: "sr:player:15354",
+name: "Bale, Gareth",
+type: "forward",
+date_of_birth: "1989-07-16",
+nationality: "Wales",
+country_code: "WAL",
+height: 185,
+weight: 82,
+jersey_number: 11,
+preferred_foot: "left",
+gender: "male"
+},
+{
+id: "sr:player:17787",
+name: "Marcelo",
+type: "defender",
+date_of_birth: "1988-05-12",
+nationality: "Brazil",
+country_code: "BRA",
+height: 174,
+weight: 80,
+jersey_number: 12,
+preferred_foot: "left",
+gender: "male"
+},
+{
+id: "sr:player:18184",
+name: "Casilla, Kiko",
+type: "goalkeeper",
+date_of_birth: "1986-10-02",
+nationality: "Spain",
+country_code: "ESP",
+height: 190,
+weight: 86,
+jersey_number: 13,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:122951",
+name: "Casemiro",
+type: "midfielder",
+date_of_birth: "1992-02-23",
+nationality: "Brazil",
+country_code: "BRA",
+height: 185,
+weight: 84,
+jersey_number: 14,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:962433",
+name: "Valverde, Federico",
+type: "midfielder",
+date_of_birth: "1998-07-22",
+nationality: "Uruguay",
+country_code: "URY",
+height: 181,
+weight: 74,
+jersey_number: 15,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:255239",
+name: "Vazquez, Lucas",
+type: "forward",
+date_of_birth: "1991-07-01",
+nationality: "Spain",
+country_code: "ESP",
+height: 173,
+weight: 70,
+jersey_number: 17,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:353138",
+name: "Llorente, Marcos",
+type: "midfielder",
+date_of_birth: "1995-01-30",
+nationality: "Spain",
+country_code: "ESP",
+height: 184,
+weight: 73,
+jersey_number: 18,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:353250",
+name: "Odriozola, Alvaro",
+type: "defender",
+date_of_birth: "1995-12-14",
+nationality: "Spain",
+country_code: "ESP",
+height: 176,
+weight: 66,
+jersey_number: 19,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:361004",
+name: "Asensio, Marco",
+type: "midfielder",
+date_of_birth: "1996-01-21",
+nationality: "Spain",
+country_code: "ESP",
+height: 182,
+weight: 76,
+jersey_number: 20,
+preferred_foot: "left",
+gender: "male"
+},
+{
+id: "sr:player:103417",
+name: "Isco",
+type: "midfielder",
+date_of_birth: "1992-04-21",
+nationality: "Spain",
+country_code: "ESP",
+height: 176,
+weight: 79,
+jersey_number: 22,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:777892",
+name: "Reguilon, Sergio",
+type: "defender",
+date_of_birth: "1996-12-16",
+nationality: "Spain",
+country_code: "ESP",
+height: 180,
+jersey_number: 23,
+preferred_foot: "left",
+gender: "male"
+},
+{
+id: "sr:player:547838",
+name: "Ceballos, Dani",
+type: "midfielder",
+date_of_birth: "1996-08-07",
+nationality: "Spain",
+country_code: "ESP",
+height: 179,
+weight: 70,
+jersey_number: 24,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:70988",
+name: "Courtois, Thibaut",
+type: "goalkeeper",
+date_of_birth: "1992-05-11",
+nationality: "Belgium",
+country_code: "BEL",
+height: 199,
+weight: 96,
+jersey_number: 25,
+preferred_foot: "left",
+gender: "male"
+},
+{
+id: "sr:player:1047473",
+name: "De La Fuente, Adrian",
+type: "defender",
+date_of_birth: "1999-02-26",
+nationality: "Spain",
+country_code: "ESP",
+jersey_number: 26,
+gender: "male"
+},
+{
+id: "sr:player:592100",
+name: "Gonzalez, Cristo",
+type: "forward",
+date_of_birth: "1997-10-24",
+nationality: "Spain",
+country_code: "ESP",
+height: 180,
+weight: 73,
+jersey_number: 27,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:1134403",
+name: "Vinicius Junior",
+type: "forward",
+date_of_birth: "2000-07-12",
+nationality: "Brazil",
+country_code: "BRA",
+height: 176,
+weight: 73,
+jersey_number: 28,
+preferred_foot: "right",
+gender: "male"
+},
+{
+id: "sr:player:772065",
+name: "Sanchez, Javi",
+type: "defender",
+date_of_birth: "1997-03-14",
+nationality: "Spain",
+country_code: "ESP",
+height: 189,
+jersey_number: 31,
+gender: "male"
+},
+{
+id: "sr:player:1047509",
+name: "Franchu",
+type: "forward",
+date_of_birth: "1998-05-12",
+nationality: "Argentina",
+country_code: "ARG",
+height: 172,
+weight: 68,
+jersey_number: 34,
+preferred_foot: "right",
+gender: "male"
+}
+],
+statistics: {
+seasons: [
+{
+id: "sr:season:79",
+name: "Primera Division 93/94",
+statistics: {
+matches_played: 38,
+matches_won: 19,
+matches_drawn: 7,
+matches_lost: 12,
+goals_scored: 61,
+goals_conceded: 49,
+group_position: 4
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WLWLL",
+home: "WWDLL",
+away: "LLWWL"
+}
+},
+{
+id: "sr:season:78",
+name: "Primera Division 94/95",
+statistics: {
+matches_played: 38,
+matches_won: 23,
+matches_drawn: 9,
+matches_lost: 6,
+goals_scored: 76,
+goals_conceded: 29,
+cup_rank: 1,
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WLWWL",
+home: "WDWWL",
+away: "WWLLW"
+}
+},
+{
+id: "sr:season:77",
+name: "Primera Division 95/96",
+statistics: {
+matches_played: 42,
+matches_won: 20,
+matches_drawn: 10,
+matches_lost: 12,
+goals_scored: 75,
+goals_conceded: 51,
+group_position: 6
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "DWWWW",
+home: "LLLWW",
+away: "WWDWW"
+}
+},
+{
+id: "sr:season:76",
+name: "Primera Division 96/97",
+statistics: {
+matches_played: 42,
+matches_won: 27,
+matches_drawn: 11,
+matches_lost: 4,
+goals_scored: 85,
+goals_conceded: 36,
+cup_rank: 1,
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WLWWL",
+home: "WWWWW",
+away: "WDLLL"
+}
+},
+{
+id: "sr:season:75",
+name: "Primera Division 97/98",
+statistics: {
+matches_played: 38,
+matches_won: 17,
+matches_drawn: 12,
+matches_lost: 9,
+goals_scored: 63,
+goals_conceded: 45,
+group_position: 4
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WDLLW",
+home: "WDWLW",
+away: "LDLDL"
+}
+},
+{
+id: "sr:season:74",
+name: "Primera Division 98/99",
+statistics: {
+matches_played: 38,
+matches_won: 21,
+matches_drawn: 5,
+matches_lost: 12,
+goals_scored: 77,
+goals_conceded: 62,
+cup_rank: 2,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWWLW",
+home: "WWWWW",
+away: "LDLWL"
+}
+},
+{
+id: "sr:season:73",
+name: "Primera Division 99/00",
+statistics: {
+matches_played: 38,
+matches_won: 16,
+matches_drawn: 14,
+matches_lost: 8,
+goals_scored: 58,
+goals_conceded: 48,
+group_position: 5
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "LWLWL",
+home: "DWLLL",
+away: "DDWWW"
+}
+},
+{
+id: "sr:season:72",
+name: "Primera Division 00/01",
+statistics: {
+matches_played: 38,
+matches_won: 24,
+matches_drawn: 8,
+matches_lost: 6,
+goals_scored: 81,
+goals_conceded: 40,
+cup_rank: 1,
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "DWWDW",
+home: "WDDWW",
+away: "WWLWD"
+}
+},
+{
+id: "sr:season:71",
+name: "Primera Division 01/02",
+statistics: {
+matches_played: 38,
+matches_won: 19,
+matches_drawn: 9,
+matches_lost: 10,
+goals_scored: 69,
+goals_conceded: 44,
+cup_rank: 3,
+group_position: 3
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "LWLDL",
+home: "WWWWD",
+away: "DWLLL"
+}
+},
+{
+id: "sr:season:70",
+name: "Primera Division 02/03",
+statistics: {
+matches_played: 38,
+matches_won: 22,
+matches_drawn: 12,
+matches_lost: 4,
+goals_scored: 86,
+goals_conceded: 42,
+cup_rank: 1,
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWDWW",
+home: "DLWDW",
+away: "LWDWW"
+}
+},
+{
+id: "sr:season:12",
+name: "Champions League 03/04",
+statistics: {
+matches_played: 6,
+matches_won: 4,
+matches_drawn: 2,
+matches_lost: 0,
+goals_scored: 11,
+goals_conceded: 5,
+group_name: "F",
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WWDWD",
+home: "WWD",
+away: "WDW"
+}
+},
+{
+id: "sr:season:99",
+name: "Primera Division 03/04",
+statistics: {
+matches_played: 38,
+matches_won: 21,
+matches_drawn: 7,
+matches_lost: 10,
+goals_scored: 72,
+goals_conceded: 54,
+group_position: 4
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "LLLLL",
+home: "WLLLL",
+away: "LWWLL"
+}
+},
+{
+id: "sr:season:13",
+name: "Champions League 04/05",
+statistics: {
+matches_played: 6,
+matches_won: 3,
+matches_drawn: 2,
+matches_lost: 1,
+goals_scored: 11,
+goals_conceded: 8,
+group_name: "B",
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WWDDW",
+home: "WWD",
+away: "LDW"
+}
+},
+{
+id: "sr:season:100",
+name: "Primera Division 04/05",
+statistics: {
+matches_played: 38,
+matches_won: 25,
+matches_drawn: 5,
+matches_lost: 8,
+goals_scored: 71,
+goals_conceded: 32,
+cup_rank: 2,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWDDW",
+home: "WWWWD",
+away: "WWWDW"
+}
+},
+{
+id: "sr:season:14",
+name: "Champions League 05/06",
+statistics: {
+matches_played: 6,
+matches_won: 3,
+matches_drawn: 1,
+matches_lost: 2,
+goals_scored: 10,
+goals_conceded: 8,
+group_name: "F",
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WWWDL",
+home: "WWD",
+away: "LWL"
+}
+},
+{
+id: "sr:season:101",
+name: "Primera Division 05/06",
+statistics: {
+matches_played: 38,
+matches_won: 20,
+matches_drawn: 10,
+matches_lost: 8,
+goals_scored: 70,
+goals_conceded: 40,
+cup_rank: 2,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWWDL",
+home: "DWDWD",
+away: "DDWWL"
+}
+},
+{
+id: "sr:season:15",
+name: "Champions League 06/07",
+statistics: {
+matches_played: 6,
+matches_won: 3,
+matches_drawn: 2,
+matches_lost: 1,
+goals_scored: 14,
+goals_conceded: 8,
+group_name: "E",
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WWWDD",
+home: "WWD",
+away: "LWD"
+}
+},
+{
+id: "sr:season:102",
+name: "Primera Division 06/07",
+statistics: {
+matches_played: 38,
+matches_won: 23,
+matches_drawn: 7,
+matches_lost: 8,
+goals_scored: 66,
+goals_conceded: 40,
+cup_rank: 1,
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWWDW",
+home: "WWWWW",
+away: "WLWWD"
+}
+},
+{
+id: "sr:season:603",
+name: "Champions League 07/08",
+statistics: {
+matches_played: 6,
+matches_won: 3,
+matches_drawn: 2,
+matches_lost: 1,
+goals_scored: 13,
+goals_conceded: 9,
+group_name: "C",
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "DWDLW",
+home: "WWW",
+away: "DDL"
+}
+},
+{
+id: "sr:season:669",
+name: "Primera Division 07/08",
+statistics: {
+matches_played: 38,
+matches_won: 27,
+matches_drawn: 4,
+matches_lost: 7,
+goals_scored: 84,
+goals_conceded: 36,
+cup_rank: 1,
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWWDW",
+home: "WWWWW",
+away: "LDWWD"
+}
+},
+{
+id: "sr:season:1664",
+name: "Champions League 08/09",
+statistics: {
+matches_played: 6,
+matches_won: 4,
+matches_drawn: 0,
+matches_lost: 2,
+goals_scored: 9,
+goals_conceded: 5,
+group_name: "H",
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WLLWW",
+home: "WLW",
+away: "WLW"
+}
+},
+{
+id: "sr:season:1587",
+name: "Liga BBVA 08/09",
+statistics: {
+matches_played: 38,
+matches_won: 25,
+matches_drawn: 3,
+matches_lost: 10,
+goals_scored: 83,
+goals_conceded: 52,
+cup_rank: 2,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "LLLLL",
+home: "WWWLL",
+away: "WWLLL"
+}
+},
+{
+id: "sr:season:1825",
+name: "Champions League 09/10",
+statistics: {
+matches_played: 6,
+matches_won: 4,
+matches_drawn: 1,
+matches_lost: 1,
+goals_scored: 15,
+goals_conceded: 7,
+group_name: "C",
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WLDWW",
+home: "WLW",
+away: "WDW"
+}
+},
+{
+id: "sr:season:2252",
+name: "Liga BBVA 09/10",
+statistics: {
+matches_played: 38,
+matches_won: 31,
+matches_drawn: 3,
+matches_lost: 4,
+goals_scored: 102,
+goals_conceded: 35,
+cup_rank: 2,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWWWD",
+home: "WLWWW",
+away: "WWWWD"
+}
+},
+{
+id: "sr:season:2764",
+name: "Champions League 10/11",
+statistics: {
+matches_played: 6,
+matches_won: 5,
+matches_drawn: 1,
+matches_lost: 0,
+goals_scored: 15,
+goals_conceded: 2,
+group_name: "G",
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WWDWW",
+home: "WWW",
+away: "WDW"
+}
+},
+{
+id: "sr:season:2896",
+name: "Liga BBVA 10/11",
+statistics: {
+matches_played: 38,
+matches_won: 29,
+matches_drawn: 5,
+matches_lost: 4,
+goals_scored: 102,
+goals_conceded: 33,
+cup_rank: 2,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "LWWWW",
+home: "LDLWW",
+away: "WWWWW"
+}
+},
+{
+id: "sr:season:3170",
+name: "Club Friendly Games 2011",
+statistics: {
+matches_played: 0,
+matches_won: 0,
+matches_drawn: 0,
+matches_lost: 0,
+goals_scored: 0,
+goals_conceded: 0,
+group_position: 30
+},
+tournament: {
+id: "sr:tournament:853",
+name: "Club Friendly Games",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "W",
+home: "W"
+}
+},
+{
+id: "sr:season:3402",
+name: "Champions League 11/12",
+statistics: {
+matches_played: 6,
+matches_won: 6,
+matches_drawn: 0,
+matches_lost: 0,
+goals_scored: 19,
+goals_conceded: 2,
+group_name: "D",
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WWWWW",
+home: "WWW",
+away: "WWW"
+}
+},
+{
+id: "sr:season:3502",
+name: "Primera Division 11/12",
+statistics: {
+matches_played: 38,
+matches_won: 32,
+matches_drawn: 4,
+matches_lost: 2,
+goals_scored: 121,
+goals_conceded: 32,
+cup_rank: 1,
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWWWW",
+home: "WDWWW",
+away: "WWWWW"
+}
+},
+{
+id: "sr:season:4140",
+name: "Club Friendly Games 2012",
+statistics: {
+matches_played: 2,
+matches_won: 1,
+matches_drawn: 0,
+matches_lost: 1,
+goals_scored: 7,
+goals_conceded: 6,
+group_position: 6
+},
+tournament: {
+id: "sr:tournament:853",
+name: "Club Friendly Games",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "LWWW",
+home: "WWW",
+away: "L"
+}
+},
+{
+id: "sr:season:4788",
+name: "UEFA Champions League 12/13",
+statistics: {
+matches_played: 6,
+matches_won: 3,
+matches_drawn: 2,
+matches_lost: 1,
+goals_scored: 15,
+goals_conceded: 9,
+group_name: "D",
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WLDDW",
+home: "WDW",
+away: "WLD"
+}
+},
+{
+id: "sr:season:4959",
+name: "Primera Division 12/13",
+statistics: {
+matches_played: 38,
+matches_won: 26,
+matches_drawn: 7,
+matches_lost: 5,
+goals_scored: 103,
+goals_conceded: 42,
+cup_rank: 2,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWDDW",
+home: "WWWWW",
+away: "DWWDD"
+}
+},
+{
+id: "sr:season:5699",
+name: "Club Friendly Games 2013",
+statistics: {
+matches_played: 1,
+matches_won: 1,
+matches_drawn: 0,
+matches_lost: 0,
+goals_scored: 1,
+goals_conceded: 0,
+group_position: 3
+},
+tournament: {
+id: "sr:tournament:853",
+name: "Club Friendly Games",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WW",
+home: "W",
+away: "W"
+}
+},
+{
+id: "sr:season:6359",
+name: "UEFA Champions League 13/14",
+statistics: {
+matches_played: 6,
+matches_won: 5,
+matches_drawn: 1,
+matches_lost: 0,
+goals_scored: 20,
+goals_conceded: 5,
+group_name: "B",
+cup_rank: 1,
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WWDWW",
+home: "WWW",
+away: "WDW"
+}
+},
+{
+id: "sr:season:6559",
+name: "Primera Division 13/14",
+statistics: {
+matches_played: 38,
+matches_won: 27,
+matches_drawn: 6,
+matches_lost: 5,
+goals_scored: 104,
+goals_conceded: 38,
+cup_rank: 3,
+group_position: 3
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WDDLW",
+home: "WWWDW",
+away: "WLWDL"
+}
+},
+{
+id: "sr:season:8226",
+name: "UEFA Champions League 14/15",
+statistics: {
+matches_played: 6,
+matches_won: 6,
+matches_drawn: 0,
+matches_lost: 0,
+goals_scored: 16,
+goals_conceded: 2,
+group_name: "B",
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WWWWW",
+home: "WWW",
+away: "WWW"
+}
+},
+{
+id: "sr:season:8034",
+name: "Int. Champions Cup 2014",
+statistics: {
+matches_played: 3,
+matches_won: 0,
+matches_drawn: 1,
+matches_lost: 2,
+goals_scored: 4,
+goals_conceded: 8,
+group_name: "A",
+group_position: 4
+},
+tournament: {
+id: "sr:tournament:1337",
+name: "Int. Champions Cup",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "LLL",
+home: "L",
+away: "LL"
+}
+},
+{
+id: "sr:season:8578",
+name: "Primera Division 14/15",
+statistics: {
+matches_played: 38,
+matches_won: 30,
+matches_drawn: 2,
+matches_lost: 6,
+goals_scored: 118,
+goals_conceded: 38,
+cup_rank: 2,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWDWW",
+home: "WWWDW",
+away: "LWWWW"
+}
+},
+{
+id: "sr:season:10484",
+name: "UEFA Champions League 15/16",
+statistics: {
+matches_played: 6,
+matches_won: 5,
+matches_drawn: 1,
+matches_lost: 0,
+goals_scored: 19,
+goals_conceded: 3,
+group_name: "A",
+cup_rank: 1,
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WDWWW",
+home: "WWW",
+away: "WDW"
+}
+},
+{
+id: "sr:season:10692",
+name: "Primera Division 15/16",
+statistics: {
+matches_played: 38,
+matches_won: 28,
+matches_drawn: 6,
+matches_lost: 4,
+goals_scored: 110,
+goals_conceded: 34,
+cup_rank: 2,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWWWW",
+home: "WWWWW",
+away: "WWWWW"
+}
+},
+{
+id: "sr:season:11522",
+name: "Club Friendly Games 2016",
+statistics: {
+matches_played: 0,
+matches_won: 0,
+matches_drawn: 0,
+matches_lost: 0,
+goals_scored: 0,
+goals_conceded: 0,
+group_position: 6
+},
+tournament: {
+id: "sr:tournament:853",
+name: "Club Friendly Games",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "W",
+home: "W"
+}
+},
+{
+id: "sr:season:33051",
+name: "UEFA Champions League 16/17",
+statistics: {
+matches_played: 6,
+matches_won: 3,
+matches_drawn: 3,
+matches_lost: 0,
+goals_scored: 16,
+goals_conceded: 10,
+group_name: "F",
+cup_rank: 1,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "DWDWD",
+home: "WWD",
+away: "DDW"
+}
+},
+{
+id: "sr:season:32871",
+name: "Int. Champions Cup 2016",
+statistics: {
+matches_played: 3,
+matches_won: 2,
+matches_drawn: 0,
+matches_lost: 1,
+goals_scored: 5,
+goals_conceded: 5,
+group_position: 5
+},
+tournament: {
+id: "sr:tournament:1337",
+name: "Int. Champions Cup",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "LWW",
+home: "LW",
+away: "W"
+}
+},
+{
+id: "sr:season:33529",
+name: "LaLiga 16/17",
+statistics: {
+matches_played: 38,
+matches_won: 29,
+matches_drawn: 6,
+matches_lost: 3,
+goals_scored: 106,
+goals_conceded: 41,
+cup_rank: 1,
+group_position: 1
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WWWWW",
+home: "WDLWW",
+away: "WWWWW"
+}
+},
+{
+id: "sr:season:38618",
+name: "Club Friendly Games 2017",
+statistics: {
+matches_played: 0,
+matches_won: 0,
+matches_drawn: 0,
+matches_lost: 0,
+goals_scored: 0,
+goals_conceded: 0,
+group_position: 4
+},
+tournament: {
+id: "sr:tournament:853",
+name: "Club Friendly Games",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "W",
+home: "W"
+}
+},
+{
+id: "sr:season:41198",
+name: "UEFA Champions League 17/18",
+statistics: {
+matches_played: 6,
+matches_won: 4,
+matches_drawn: 1,
+matches_lost: 1,
+goals_scored: 17,
+goals_conceded: 7,
+group_name: "H",
+cup_rank: 1,
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WDLWW",
+home: "WDW",
+away: "WLW"
+}
+},
+{
+id: "sr:season:41572",
+name: "Int. Champions Cup 2017",
+statistics: {
+matches_played: 3,
+matches_won: 0,
+matches_drawn: 1,
+matches_lost: 2,
+goals_scored: 5,
+goals_conceded: 10,
+group_position: 8
+},
+tournament: {
+id: "sr:tournament:1337",
+name: "Int. Champions Cup",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "LLL",
+home: "LL",
+away: "L"
+}
+},
+{
+id: "sr:season:42556",
+name: "LaLiga 17/18",
+statistics: {
+matches_played: 38,
+matches_won: 22,
+matches_drawn: 10,
+matches_lost: 6,
+goals_scored: 94,
+goals_conceded: 44,
+cup_rank: 3,
+group_position: 3
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "WDLWD",
+home: "WDDWW",
+away: "WWDLD"
+}
+},
+{
+id: "sr:season:54533",
+name: "UEFA Champions League 18/19",
+statistics: {
+matches_played: 3,
+matches_won: 2,
+matches_drawn: 0,
+matches_lost: 1,
+goals_scored: 5,
+goals_conceded: 2,
+group_name: "G",
+group_position: 2
+},
+tournament: {
+id: "sr:tournament:7",
+name: "UEFA Champions League",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "WLW",
+home: "WW",
+away: "L"
+}
+},
+{
+id: "sr:season:53642",
+name: "Int. Champions Cup 2018",
+statistics: {
+matches_played: 3,
+matches_won: 2,
+matches_drawn: 0,
+matches_lost: 1,
+goals_scored: 6,
+goals_conceded: 4,
+group_position: 6
+},
+tournament: {
+id: "sr:tournament:1337",
+name: "Int. Champions Cup",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:393",
+name: "International Clubs"
+}
+},
+form: {
+total: "LWW",
+home: "WW",
+away: "L"
+}
+},
+{
+id: "sr:season:55917",
+name: "LaLiga 18/19",
+statistics: {
+matches_played: 10,
+matches_won: 4,
+matches_drawn: 2,
+matches_lost: 4,
+goals_scored: 14,
+goals_conceded: 14,
+group_position: 9
+},
+tournament: {
+id: "sr:tournament:8",
+name: "LaLiga",
+sport: {
+id: "sr:sport:1",
+name: "Soccer"
+},
+category: {
+id: "sr:category:32",
+name: "Spain",
+country_code: "ESP"
+}
+},
+form: {
+total: "LDLLL",
+home: "WWWDL",
+away: "WDLLL"
+}
+}
+]
+}
+}
