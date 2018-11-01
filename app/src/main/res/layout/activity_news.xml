@@ -26,7 +26,7 @@
         android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="@string/real_madrid"
+        android:text="SOCCER :"
         android:textColor="@android:color/white"
         android:textSize="@dimen/current_activity_text"
         android:textStyle="bold"
