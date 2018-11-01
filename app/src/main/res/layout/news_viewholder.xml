@@ -9,22 +9,8 @@
     android:layout_marginTop="5dp"
     android:orientation="vertical"
     android:paddingLeft="5dp"
-    android:paddingRight="5dp">
-
-    <TextView
-        android:id="@+id/news_tittle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:text="News Tittle"
-        android:textAlignment="center"
-        android:textColor="@color/color_yellow"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:paddingRight="5dp"
+    >
 
     <ImageView
         android:id="@+id/newsImage"
@@ -32,35 +18,35 @@
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:scaleType="fitXY"
-        android:paddingLeft="30dp"
         android:paddingRight="10dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/news_text"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/news_text"
-        app:layout_constraintTop_toBottomOf="@+id/news_tittle"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        />
 
     <TextView
         android:id="@+id/news_text"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:textAlignment="center"
-        android:gravity="center"
         android:ellipsize="end"
-        android:maxLines="5"
+        android:gravity="center_vertical"
+        android:maxLines="3"
+        android:paddingRight="5dp"
         android:text="Joe Denly was making his first international appearance since 2010 and took the match-winning wickets"
-        android:textColor="@android:color/white"
+        android:textColor="@color/color_yellow"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/newsImage"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/news_tittle" />
+        app:layout_constraintStart_toEndOf="@+id/newsImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        />
 
 </android.support.constraint.ConstraintLayout>

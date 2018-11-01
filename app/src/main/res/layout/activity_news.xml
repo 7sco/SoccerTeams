@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/news_background"
+    android:background="#242c35"
     tools:context=".presentation.view.NewsActivity">
 
     <TextView

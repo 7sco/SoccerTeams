@@ -22,8 +22,6 @@ import static com.example.franciscoandrade.soccerteams.R.color.bkg_news2;
 public class NewsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     @BindView(R.id.container)
     ConstraintLayout cont;
-    @BindView(R.id.news_tittle)
-    TextView newsTittle;
     @BindView(R.id.news_text)
     TextView newsText;
     @BindView(R.id.newsImage)
@@ -43,9 +41,7 @@ public class NewsViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         if (position%2 ==0 ){
             cont.setBackgroundColor(itemView.getResources().getColor(bkg_news2));
         }
-        newsTittle.setText(articles.getTitle());
-        Log.d("NEWS", "bind: "+articles.getDescription());
-        newsText.setText(articles.getDescription());
+        newsText.setText(articles.getTitle());
         Picasso.get().load(articles.getUrltoimage()).into(newsImage);
 
     }
