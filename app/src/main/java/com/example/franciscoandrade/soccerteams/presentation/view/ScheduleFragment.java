@@ -63,6 +63,7 @@ public class ScheduleFragment extends Fragment {
             public void onResponse(Call<ScheduleTeam> call, Response<ScheduleTeam> response) {
               Log.d("CALENDAR", "onResponse: "+response);
               if (response.body()!=null){
+                  response.body().getSchedule().remove(0);
                 adapter.addData(response.body().getSchedule());
               }
             }

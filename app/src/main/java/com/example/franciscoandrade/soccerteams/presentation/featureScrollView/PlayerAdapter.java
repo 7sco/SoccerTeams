@@ -51,9 +51,9 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
         String url =urlS+playerUrl;
         Picasso.get()
             .load(url)
-            .error(R.drawable.realmadridshield)
             .transform(new CropTransformation(300, 250, CropTransformation.GravityHorizontal.CENTER,
                 CropTransformation.GravityVertical.TOP))
+            .error(R.drawable.realmadridshield)
             .into(holder.image);
     }
 
